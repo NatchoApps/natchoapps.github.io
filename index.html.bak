@@ -10,49 +10,8 @@
   <!-- Header -->
   <header>
     <img src="logo.png" alt="Natcho Apps Logo">
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#apps">Our Apps</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
+    
   </header>
-
-  <!-- Hero Section -->
-  <section id="home">
-    <h1>Welcome to Natcho Apps</h1>
-    <p>Crafting exceptional Android apps for the mobile-first world.</p>
-    <a href="#apps">Explore Our Apps</a>
-    <!-- Remember to include a background image in your CSS -->
-  </section>
-
-  <!-- Apps Section -->
-  <section id="apps">
-    <h2>Redefining digital experiences, one app at a time.</h2>
-    <!-- Repeat the following structure for each app -->
-    <div class="app">
-      <img src="path-to-app-image" alt="App 1">
-      <h3>App 1</h3>
-      <p>A quick, enticing description of App 1.</p>
-      <a href="link-to-app-on-google-play">Download on Google Play</a>
-    </div>
-    <!-- More Apps Button -->
-    <a href="link-to-more-apps-page">More Apps</a>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about">
-    <h2>Powered by passion and fuelled by code.</h2>
-    <p>At Natcho Apps, we're more than just a team of app developers. We're innovators and creators...</p>
-    <!-- Add more about your company here -->
-  </section>
-
-  <!-- Contact Us Section -->
-  <section id="contact">
-    <!-- Insert your preferred method of contact here, such as a form or email address -->
-  </section>
 
   <!-- Footer -->
   <footer>
