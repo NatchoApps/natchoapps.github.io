@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Natcho Apps</title>
+  <style>
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh; /* reduced from 100vh to 50vh */
+    }
+    footer {
+      text-align: center;
+    }
+  </style>
   <!-- Remember to include your CSS and JS files here -->
 </head>
 <body>
@@ -10,12 +21,11 @@
   <!-- Header -->
   <header>
     <img src="logo.png" alt="Natcho Apps Logo">
-    
   </header>
 
   <!-- Footer -->
   <footer>
-    <p>© 2023 Natcho Apps</p>
+    <p>© 2023 Natcho Apps. <a href="privacy_policy.html">Privacy Policy</a></p>
   </footer>
 
 </body>
