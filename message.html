@@ -60,6 +60,20 @@
             margin-bottom: 10px;
             font-size: 1.1em;
         }
+        .refresh-btn {
+            background-color: #ff6d00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .refresh-btn:hover {
+            background-color: #ff8c00;
+        }
     </style>
 </head>
 <body>
@@ -69,14 +83,71 @@
     <div class="sun"></div>
     
     <div class="safety-tips">
-        <h3>Safety Tips:</h3>
-        <ul>
-            <li>Drink plenty of water throughout the day</li>
-            <li>Wear sunscreen with SPF 30+</li>
-            <li>Seek shade during peak hours (10am-4pm)</li>
-            <li>Wear light, loose-fitting clothing</li>
-            <li>Never leave children or pets in parked vehicles</li>
-        </ul>
+        <h3>Today's Safety Tip:</h3>
+        <div id="randomTip"></div>
     </div>
+
+    <button class="refresh-btn" onclick="showRandomTip()">Show Another Tip</button>
+
+    <script>
+        const tips = [
+            "Drink at least 8 glasses of water daily",
+            "Apply sunscreen 30 minutes before going outside",
+            "Reapply sunscreen every 2 hours",
+            "Use SPF 30 or higher sunscreen",
+            "Wear UV-protective sunglasses",
+            "Wear a wide-brimmed hat",
+            "Seek shade between 10am-4pm",
+            "Wear light-colored, loose clothing",
+            "Never leave kids/pets in parked cars",
+            "Check UV index before going out",
+            "Use lip balm with SPF protection",
+            "Wear long-sleeved rash guards for swimming",
+            "Take cool showers to lower body temperature",
+            "Eat water-rich fruits like watermelon",
+            "Avoid alcohol and caffeine in heat",
+            "Recognize signs of heat exhaustion",
+            "Use umbrellas at outdoor events",
+            "Wear breathable, moisture-wicking fabrics",
+            "Park in shaded areas when possible",
+            "Use cooling towels during outdoor activities",
+            "Install window shades in your car",
+            "Exercise in early morning or evening",
+            "Take frequent breaks in air conditioning",
+            "Wear light-colored clothing",
+            "Check medication side effects for sun sensitivity",
+            "Protect your scalp with a hat or SPF",
+            "Use aloe vera for sunburn relief",
+            "Keep emergency water in your car",
+            "Wear shoes that protect from hot surfaces",
+            "Create shade with pop-up tents outdoors",
+            "Monitor elderly neighbors during heat waves",
+            "Use fans with ice for makeshift AC",
+            "Freeze water bottles for cold drinks later",
+            "Know the symptoms of heat stroke",
+            "Avoid heavy meals in extreme heat",
+            "Use window reflectors to keep cars cool",
+            "Wet your hat before going in the sun",
+            "Choose shady picnic spots",
+            "Keep pets indoors during peak heat",
+            "Use SPF even on cloudy days"
+        ];
+
+        function getRandomTip() {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            return tips[randomIndex];
+        }
+
+        function showRandomTip() {
+            document.getElementById('randomTip').innerHTML = `
+                <p><strong>${getRandomTip()}</strong></p>
+                <p>${getRandomTip()}</p>
+                <p>${getRandomTip()}</p>
+            `;
+        }
+
+        // Show tips when page loads
+        window.onload = showRandomTip;
+    </script>
 </body>
 </html>
