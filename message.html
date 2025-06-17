@@ -52,13 +52,13 @@
             width: 500px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        ul {
-            text-align: left;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
+        .tip-content {
+            font-size: 1.2em;
+            margin: 20px 0;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .refresh-btn {
             background-color: #ff6d00;
@@ -67,7 +67,7 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 1em;
-            margin-top: 20px;
+            margin-top: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
@@ -84,10 +84,9 @@
     
     <div class="safety-tips">
         <h3>Today's Safety Tip:</h3>
-        <div id="randomTip"></div>
+        <div class="tip-content" id="randomTip"></div>
+        <button class="refresh-btn" onclick="showRandomTip()">Get Another Tip</button>
     </div>
-
-    <button class="refresh-btn" onclick="showRandomTip()">Show Another Tip</button>
 
     <script>
         const tips = [
@@ -139,14 +138,10 @@
         }
 
         function showRandomTip() {
-            document.getElementById('randomTip').innerHTML = `
-                <p><strong>${getRandomTip()}</strong></p>
-                <p>${getRandomTip()}</p>
-                <p>${getRandomTip()}</p>
-            `;
+            document.getElementById('randomTip').textContent = getRandomTip();
         }
 
-        // Show tips when page loads
+        // Show tip when page loads
         window.onload = showRandomTip;
     </script>
 </body>
